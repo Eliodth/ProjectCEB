@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+
+    <meta charset="UTF-8">
+
+    <title>Excusas</title>
+
+    <link rel="stylesheet" href="style.css">
+
+
+</head>
+<body>
+
+
+<header>
+
+    <div class="logo">
+        <img src="Imagenes Project ceb/ciudadela.jpg">
+    </div>
+
+<h1>Project CEB</h1>
+
+<div class="top-icons">
+    <i class="fa-solid fa-manifying-glass"></i>
+    <i class="fa-solid fa-bell"></i>
+    <i class="fa-solid fa-user-circle"></i>
+</div>
+
+<div class="campana-notificaciones" id="campanaNotificaciones">
+    🔔
+    <span id="contadorNotificaciones">0</span>
+
+    <div class="lista-notificaciones" id="listaNotificaciones">
+        <div class="titulo-notificaciones">
+            Notificaciones
+        </div>
+
+        <div id="contenidoNotificaciones">
+            <p class="sin-notificaciones">
+                No tienes notificaciones.
+            </p>
+        </div>
+    </div>
+</div>
+
+
+<nav>
+
+<a href="entrada.html"><i class="fa-solid fa-house"></i> Entrada</a>
+
+<a href="checklist.html"><i class="fa-solid fa-users"></i> Checklist</a>
+
+<a href="configuracion.html"><i class="fa-solid fa-gear"></i> Configuración</a>
+
+<a href="perfil.html"><i class="fa-solid fa-user"></i> Perfil</a>
+
+<a href="contacto.html"><i class="fa-solid fa-phone"></i> Contacto</a>
+
+<button class="btn-cerrar-sesion" onclick="cerrarSesion()">
+    Cerrar sesión
+</button>
+
+</nav>
+
+</header>
+
+<div class="container">
+
+    <div class="card">
+
+        <h2>Registrar excusas</h2>
+        
+        <form id="formExcusa">
+            
+            <select id="tipoExcusa" required>
+                <option value="">Selecciona el tipo de excusa</option>
+                <option value="Inasistencia">Inasistencia</option>
+                <option value="Salud">Salud</option>
+                <option value="Uniforme">Uniforme</option>
+             </select>
+
+    
+<input
+    type="text"
+    id="nombreEstudiante"
+    placeholder="Nombre completo del estudiante"
+    required
+>
+
+<input
+    type="text"
+    id="nombreAcudiente"
+    placeholder="Nombre del acudiente"
+    required
+>
+
+<input
+    type="text"
+    id="detalleExcusa"
+    placeholder="Detalle de la Excusa"
+    required
+>
+
+
+    <label for="fecha">Selecciona una fecha de registro:</label>
+    <input type="date" id="fecha" required>
+
+    <input
+        type="text"
+        id="firmaDigital"
+        placeholder="Firma digital"
+        required
+    >
+
+    <input type="file" id="archivoExcusa" required>
+
+    <button type="submit">Enviar</button>
+
+    <div id="mensajeExito" class="mensaje-exito" style="display: none;">
+        ¡La excusa se envió correctamente!
+    </div>
+
+</form>
+
+
+    </div>
+
+</div>
+
+<div class="card">
+    
+    <h2>Registro de excusas</h2>
+
+    <table id="tablaExcusas">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Tipo</th>
+                <th>Estudiante</th>
+                <th>Acudiente</th>
+            </tr>
+        </thead>
+
+</div>
+
+<footer>
+
+    <p>Project CEB 2026</p>
+</footer>
+
+<script src="script.js"></script>
+
+</body>    
+</html>
